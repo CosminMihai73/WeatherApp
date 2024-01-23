@@ -62,8 +62,8 @@ class WeatherApp:
 
         def update():
             try:
-                api_key = '49a4117c5f7fb7994bd43c7827b0ec58'
-                base_url = 'https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=49a4117c5f7fb7994bd43c7827b0ec58'
+                api_key = ''
+                base_url = 'https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID='
 
                 params = {
                     'q': city,
