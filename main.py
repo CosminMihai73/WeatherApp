@@ -12,7 +12,7 @@ class WeatherApp:
 
         self.style = ttk.Style()
         self.style.configure("TLabel", font=("Helvetica", 12), anchor="center")
-        self.style.configure("TButton", font=("Helvetica", 12), foreground="blue")  # Change button color here
+        self.style.configure("TButton", font=("Helvetica", 12), foreground="blue")  
         self.style.configure("TRadiobutton", font=("Helvetica", 12))
         self.style.configure("TCombobox", font=("Helvetica", 12))
 
@@ -83,7 +83,7 @@ class WeatherApp:
                     weather_info = f"Weather Conditions: {weather_description}\nTemperature: {temperature}°"
                     self.weather_label.config(text=weather_info)
 
-                    # Update additional weather information
+                    
                     self.label_wind.config(text=f"Wind Speed: {wind_speed} m/s")
                     self.label_humidity.config(text=f"Humidity: {humidity}%")
                 else:
@@ -91,7 +91,7 @@ class WeatherApp:
             except Exception as e:
                 messagebox.showerror("Error", f"Error: {str(e)}")
 
-        # Create a thread to perform the API request in the background
+     
         thread = threading.Thread(target=update)
         thread.start()
 
